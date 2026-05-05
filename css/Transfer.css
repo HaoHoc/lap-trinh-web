@@ -1,0 +1,83 @@
+/* File: src/assets/css/Transfer.css */
+
+/* Áp dụng style của body cũ vào class cha mới */
+.transfer-page-container {
+  /* Các thuộc tính này vốn dành cho <body> */
+  margin: 0;
+  padding: 40px 0; /* Thêm padding để nội dung không dính sát viền */
+  background: linear-gradient(to bottom right, #e1f5fe, #fffde7);
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  min-height: 100vh; /* Đảm bảo background chiếm toàn bộ chiều cao */
+  box-sizing: border-box;
+}
+
+/* Thêm .transfer-page-container vào trước mỗi selector khác */
+.transfer-page-container .content {
+  max-width: 500px;
+  margin: 0 auto; /* Đã có padding ở container nên margin-top có thể bỏ */
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.transfer-page-container .inf_title_paycart {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  color: #00796b;
+  text-shadow: 0 1px 0 #fff;
+}
+
+/* Chỉ các thẻ <p> bên trong container mới bị ảnh hưởng */
+.transfer-page-container p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  line-height: 1.6;
+  color: #444;
+}
+
+.transfer-page-container .qr-box img {
+  max-width: 300px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.transfer-page-container .qr-box img:hover {
+  transform: scale(1.05);
+}
+
+.transfer-page-container #timer {
+  font-weight: bold;
+  color: #d32f2f;
+  font-size: 1.3rem;
+}
+
+.transfer-page-container #status {
+  font-size: 1rem;
+  margin-top: 1rem;
+  min-height: 1.5rem;
+  color: #f44336;
+  font-weight: 500;
+}
+
+.transfer-page-container .btn_payOnline {
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #ef5350, #e53935);
+  border: none;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.transfer-page-container .btn_payOnline:hover {
+  background: #c62828;
+  transform: scale(1.05);
+}

@@ -1,0 +1,80 @@
+.content_top {
+  width: 95%;
+  margin: 0 auto;
+}
+.contentProducts_navigate {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter_shopAlll {
+  width: 40%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.custom-dropdown {
+  position: relative;
+  width: 220px;
+  user-select: none;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.custom-dropdown .selected {
+  background: linear-gradient(135deg, #1c1c1c, #6b0000);
+  color: white;
+  text-align: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.custom-dropdown .selected:hover {
+  transform: scale(1.03);
+}
+
+.custom-dropdown .options {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.custom-dropdown.open .options {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.custom-dropdown .options li {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-weight: 500;
+}
+
+.custom-dropdown .options li:hover {
+  background: #f0f0f5;
+}
+
+.home_navigate {
+  color: #969696;
+  text-decoration: none;
+}
+.product_top {
+  margin-top: 50px;
+}

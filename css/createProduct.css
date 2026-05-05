@@ -1,0 +1,243 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  padding-top: 75px;
+}
+
+h2 {
+  font-family: "Be Vietnam Pro", sans-serif;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 800;
+  background: linear-gradient(to right, #ff6600, #ff944d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 4px rgba(255, 106, 0, 0.3);
+  animation: slideDown 0.8s ease-out;
+  margin-bottom: 35px;
+}
+
+form.product-form {
+  max-width: 800px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+form.product-form h2 {
+  font-family: "Be Vietnam Pro", sans-serif;
+  text-align: left; /* Căn lề trái thay vì giữa */
+  font-size: 24px; /* Kích thước font nhỏ hơn, phù hợp với form */
+  font-weight: 700;
+  color: #333; /* Bỏ gradient, dùng màu chữ đậm */
+
+  /* Reset các style không cần thiết */
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  text-shadow: none;
+  animation: none;
+
+  /* Thêm đường gạch chân để phân tách với nội dung form */
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 15px;
+  margin-top: 0; /* Bỏ margin top */
+  margin-bottom: 30px; /* Khoảng cách đến trường input đầu tiên */
+}
+
+.product-form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+}
+
+.product-form input,
+.product-form textarea,
+.product-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #fefefe;
+  transition: border 0.2s ease-in-out;
+}
+
+.product-form input:focus,
+.product-form textarea:focus,
+.product-form select:focus {
+  border-color: #ff6600;
+  box-shadow: 0 0 8px rgba(255, 106, 0, 0.2);
+  outline: none;
+}
+
+/* ✅ Nút Submit (xanh ngọc) */
+.product-form button[type="submit"] {
+  background: linear-gradient(to right, #f7971e, #ffd200);
+  /* cam hổ phách -> vàng hoàng gia */
+  /* cam san hô -> vàng nhạt */
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 25px;
+  box-shadow: 0 8px 16px rgba(247, 151, 30, 0.3);
+  transition: 0.4s ease;
+}
+
+.product-form button[type="submit"]:hover {
+  transform: scale(1.06);
+  opacity: 0.95;
+}
+
+/* 🔄 Nút quay lại (gradient xám bạc hiện đại) */
+#back-btn {
+  display: inline-block;
+  background: linear-gradient(to right, #232526, #414345);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  float: right;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#back-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* ➕ Nút thêm (gradient cam hồng dịu nhẹ) */
+.product-form button[type="button"] {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.product-form button[type="button"]:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* ❌ Nút xoá (gradient đỏ hồng lạnh sang trọng) */
+.field-group button {
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.field-group button:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* Nhóm input */
+.field-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.field-group input,
+.field-group select {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Upload button styling */
+.btn-upload {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 10px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-upload:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+.btn-upload:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Progress bar styling */
+.upload-progress {
+  position: relative;
+  width: 100px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.upload-progress span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  font-weight: bold;
+  color: #333;
+  z-index: 1;
+}

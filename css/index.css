@@ -1,0 +1,18 @@
+.main-content-area {
+  /* Đẩy nội dung xuống một khoảng bằng chiều cao của Header.
+     Bạn có thể điều chỉnh giá trị 80px này cho khớp với chiều cao thực tế của Header. */
+  padding-top: 60px;
+
+  /* Thêm khoảng đệm bên dưới để không bị dính vào Footer */
+  padding-bottom: 40px;
+
+  /* Giúp trang có nội dung ngắn không bị kéo footer lên cao */
+  min-height: 100vh;
+  background-color: #f9f9f9; /* Thêm màu nền nhẹ cho trang */
+}
+
+@media (max-width: 768px) {
+  .main-content-area {
+    padding-top: 120px;
+  }
+}

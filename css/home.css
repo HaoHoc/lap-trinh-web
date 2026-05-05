@@ -1,0 +1,666 @@
+/* src/assets/css/home.css */
+
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin: 60px 0 40px 0;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(45deg, #ee5022, #ff6b35);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* --- Carousel Custom Styles --- */
+.slick-slider {
+  position: relative;
+}
+
+.slick-dots {
+  bottom: 30px;
+}
+
+.slick-dots li button:before {
+  font-size: 14px;
+  color: white;
+  opacity: 0.6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #ee5022;
+}
+
+.slick-arrow {
+  z-index: 2;
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.slick-arrow:hover {
+  background: #ee5022 !important;
+  transform: scale(1.1);
+}
+
+.slick-arrow:before {
+  font-size: 22px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.slick-arrow:hover:before {
+  color: white;
+}
+
+.slick-prev {
+  left: 30px;
+}
+
+.slick-next {
+  right: 30px;
+}
+
+/* --- 1. Hero Slider --- */
+.slider-container {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  background: linear-gradient(45deg, #fef6e4, #fff);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container .slick-slide img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Legacy slider styles for fallback */
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #ee5022;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 15px 20px;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+.arrow:hover {
+  background: #ee5022;
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+.left {
+  left: 30px;
+}
+.right {
+  right: 30px;
+}
+
+/* --- 2. Review Categories --- */
+.review_home {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 90%;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.item_review {
+  width: 100%;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 30px;
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.item_review::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3),
+    transparent
+  );
+  transition: opacity 0.3s ease;
+}
+
+.item_review:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(238, 80, 34, 0.3);
+}
+
+.item_review:hover::before {
+  opacity: 0.5;
+}
+
+.item_review p {
+  position: relative;
+  z-index: 2;
+  letter-spacing: 1px;
+}
+
+/* --- 3. New Products --- */
+.products-section {
+  width: 90%;
+  margin: 60px auto;
+  padding: 50px 0;
+  background: linear-gradient(135deg, #fef6e4, #fff);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.loading-container,
+.no-products {
+  text-align: center;
+  padding: 60px 0;
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.products-carousel-wrapper {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.products-carousel-wrapper .slick-arrow {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.products-carousel-wrapper .slick-arrow:hover {
+  background: #ee5022 !important;
+  transform: scale(1.15);
+  box-shadow: 0 8px 25px rgba(238, 80, 34, 0.3);
+}
+
+.products-carousel-wrapper .slick-arrow:before {
+  color: #333;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.products-carousel-wrapper .slick-arrow:hover:before {
+  color: white;
+}
+
+.products-carousel-wrapper .slick-prev {
+  left: -30px;
+}
+
+.products-carousel-wrapper .slick-next {
+  right: -30px;
+}
+
+.product-item {
+  padding: 0 15px;
+}
+
+.product-item .product-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.product-item .product-link:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(238, 80, 34, 0.15);
+}
+
+.image_product {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover .image_product {
+  transform: scale(1.05);
+}
+
+.product-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.6),
+    transparent
+  );
+  color: white;
+  padding: 25px 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.product-item:hover .product-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Chỉ áp dụng cho tên sản phẩm trong HomePage - section "HÀNG MỚI VỀ" */
+.products-section .product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: white !important; /* Màu trắng chỉ cho HomePage */
+  letter-spacing: 0.5px;
+}
+
+.product-price {
+  margin: 0;
+  font-size: 16px;
+}
+
+.product-price .price-sale {
+  color: #ee5022;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.product-price .price-original {
+  color: #ccc;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.product-price .price-normal {
+  color: #ee5022;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* --- 4. Poster Carousel --- */
+.poster-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #fff, #fef6e4);
+  margin: 40px 0;
+}
+
+.poster-carousel-wrapper {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.poster-carousel-wrapper .slick-arrow {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.poster-carousel-wrapper .slick-arrow:hover {
+  background: #ee5022 !important;
+  transform: scale(1.15);
+  box-shadow: 0 8px 25px rgba(238, 80, 34, 0.3);
+}
+
+.poster-carousel-wrapper .slick-arrow:before {
+  color: #333;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.poster-carousel-wrapper .slick-arrow:hover:before {
+  color: white;
+}
+
+.poster-carousel-wrapper .slick-prev {
+  left: -30px;
+}
+
+.poster-carousel-wrapper .slick-next {
+  right: -30px;
+}
+
+.poster-item {
+  padding: 0 15px;
+}
+
+.image_poster {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.image_poster:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(238, 80, 34, 0.2);
+}
+
+.btn-left {
+  margin-right: -22px;
+  z-index: 10;
+}
+.btn-right {
+  margin-left: -22px;
+  z-index: 10;
+}
+
+/* --- Các section còn lại (About, Fashion, Charity) --- */
+.about-us,
+.fashion-inspiration,
+.charity-banner {
+  padding: 60px 5%;
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: #f9f9f9;
+}
+.about-content,
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.fashion-inspiration {
+  background: #222;
+  color: #f2f2f2;
+}
+.inspiration-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+.card {
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(255, 60, 0, 0.4);
+}
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+.card-text {
+  padding: 20px;
+}
+.meta-info {
+  color: #ff3c00;
+  font-weight: 500;
+}
+
+.charity-banner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: #fef6e4;
+  border-radius: 20px;
+  margin: 40px 5%;
+  overflow: hidden;
+}
+.charity-text,
+.charity-image {
+  flex: 1;
+  min-width: 300px;
+}
+.charity-text {
+  padding: 40px;
+}
+.charity-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btn-charity {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.btn-charity:hover {
+  background-color: #111;
+  transform: translateY(-2px);
+}
+
+/* --- RESPONSIVE for HomePage --- */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .review_home {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 15px;
+  }
+
+  .item_review {
+    height: 350px;
+  }
+
+  .slider-container {
+    height: 450px;
+  }
+
+  .slider-container .slick-slide img {
+    height: 450px;
+  }
+
+  .products-carousel-wrapper .slick-prev {
+    left: -20px;
+  }
+
+  .products-carousel-wrapper .slick-next {
+    right: -20px;
+  }
+
+  .poster-carousel-wrapper .slick-prev {
+    left: -20px;
+  }
+
+  .poster-carousel-wrapper .slick-next {
+    right: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+    margin: 40px 0 30px 0;
+  }
+
+  .section-title::after {
+    width: 60px;
+    height: 2px;
+  }
+
+  .slider-container {
+    height: 350px;
+  }
+
+  .slider-container .slick-slide img {
+    height: 350px;
+  }
+
+  .slick-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .slick-arrow:before {
+    font-size: 18px;
+  }
+
+  .item_review {
+    height: 300px;
+    font-size: 22px;
+    padding: 20px;
+  }
+
+  .products-section,
+  .poster-section {
+    margin: 30px auto;
+    padding: 30px 0;
+  }
+
+  .slick-arrow:before {
+    font-size: 18px;
+  }
+
+  .products-carousel-wrapper .slick-arrow,
+  .poster-carousel-wrapper .slick-arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .products-carousel-wrapper .slick-prev {
+    left: -15px;
+  }
+
+  .products-carousel-wrapper .slick-next {
+    right: -15px;
+  }
+
+  .products-carousel-wrapper {
+    width: 100%;
+  }
+
+  .poster-carousel-wrapper .slick-prev {
+    left: -15px;
+  }
+
+  .poster-carousel-wrapper .slick-next {
+    right: -15px;
+  }
+
+  .poster-carousel-wrapper {
+    width: 100%;
+  }
+  .btn-scroll {
+    display: none; /* Ẩn nút, dùng vuốt */
+  }
+  .image_poster {
+    flex: 0 0 220px;
+    height: 300px;
+  }
+  .about-us,
+  .charity-banner {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-container {
+    height: 250px;
+  }
+  .item_review {
+    height: 250px;
+    font-size: 20px;
+  }
+  .image_poster {
+    flex: 0 0 180px;
+    height: 250px;
+  }
+  .about-content,
+  .charity-text {
+    padding: 30px 20px;
+  }
+  .section-title {
+    font-size: 20px;
+  }
+}

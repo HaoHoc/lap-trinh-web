@@ -1,0 +1,279 @@
+/* RESET & FONT */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: linear-gradient(135deg, #ffffff 0%, #fff8e1 100%);
+  color: #333;
+  min-height: 100vh;
+}
+.header-spacer {
+  height: 85px; /* nếu header cao 80px, chỉnh số này cho khớp */
+  width: 100%;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #ff6f00;
+  text-shadow: 0 0 6px rgba(255, 111, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.header-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.grand-total {
+  font-size: 1.5rem;
+}
+
+.grand-total strong {
+  color: #00c853;
+  font-size: 2rem;
+  text-shadow: 0 0 4px rgba(0, 200, 83, 0.4);
+}
+
+.period-info {
+  margin-top: 4px;
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+/* CONTROLS */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.control-group {
+  text-align: center;
+}
+
+.control-group label {
+  display: block;
+  color: #555;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.control-group select {
+  padding: 10px 14px;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.control-group select:hover {
+  border-color: #ff6f00;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn .icon {
+  font-size: 1.2rem;
+}
+
+.btn-export {
+  background: linear-gradient(135deg, #ff8c00, #ffc107);
+  color: #333;
+}
+
+.btn-export::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: skewX(-20deg);
+  transition: transform 0.6s ease-out;
+}
+
+.btn-export:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-export:hover::before {
+  transform: translateX(300%) skewX(-20deg);
+}
+
+.btn-home {
+  background: linear-gradient(135deg, #757575, #9e9e9e);
+  color: #ff6f00;
+}
+
+.btn-home::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 111, 0, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+  z-index: -1;
+}
+
+.btn-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15), 0 0 8px rgba(255, 111, 0, 0.5);
+}
+
+.btn-home:hover::after {
+  width: 300%;
+  height: 300%;
+}
+
+/* SECTIONS */
+.card.section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s;
+  width: 100%;
+  height: 100%;
+}
+
+.card.section:hover {
+  transform: none !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+.card.section h2 {
+  color: #ff5252;
+  margin-bottom: 18px;
+  font-size: 1.5rem;
+  text-shadow: 0 0 4px rgba(255, 82, 82, 0.4);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 300px;
+  background: #fafafa;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  text-align: center;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+th {
+  background: #eee;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+tbody tr:hover {
+  background: #fff3e0;
+}
+
+canvas {
+  width: 100% !important;
+  max-height: 360px;
+  animation: chartIn 0.6s;
+  background: transparent !important;
+}
+
+@keyframes chartIn {
+  from {
+    opacity: 0;
+    transform: scaleY(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .controls,
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .control-group select {
+    width: 100%;
+  }
+}

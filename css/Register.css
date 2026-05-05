@@ -1,0 +1,56 @@
+.content_register{
+    width: 80%;
+    margin: 0 auto;
+    padding-top:100px ;
+    display: flex;
+    gap:40px;
+}
+.title_regiter{
+    padding-bottom: 20px;
+}
+.register_content{
+    width: 45%;
+    border: 1px solid #000;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;   
+    padding-top:50px;
+    min-height: 60vh;
+}
+.input_login{
+    width: 100%;
+    padding:10px 20px;
+    margin: 15px 0;
+}
+.register_content>ul>li{
+    margin: 30px;
+}
+.btn_login_register{
+    padding: 10px 0;
+    width: 30%;
+    font-weight: bold;
+    background-color:#F05023;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+.btn_login_register:hover{
+    cursor: pointer;
+    background-color: blue;
+}
+.input_regiter_name{
+
+    padding: 9px 10px;
+}
+.name_resgiter{
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.contentResgirer_item{
+    min-height: 60%;
+    margin: 0 auto;
+}

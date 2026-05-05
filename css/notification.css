@@ -1,0 +1,52 @@
+/* src/assets/css/notification.css */
+
+/* Animation cho notification bell khi có thông báo mới */
+.has-notification {
+  animation: bellShake 0.5s ease-in-out;
+}
+
+@keyframes bellShake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(-10deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+/* Pulse effect cho notification badge */
+.notification-badge {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Hover effect cho notification button */
+.notification-menu .menu-button:hover .fa-bell {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}

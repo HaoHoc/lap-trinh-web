@@ -1,0 +1,299 @@
+/* Order History Styles */
+:root {
+  --primary-color: #ff7f32; /* Cam */
+  --secondary-color: #333; /* Đen */
+  --tertiary-color: #e66a2f; /* Cam đậm */
+  --background-color: #f9f9f9; /* Màu nền nhẹ */
+  --link-hover-color: #e66a2f; /* Màu hover cho các liên kết */
+  --font-family: "Roboto", sans-serif; /* Font chữ */
+  --border-radius: 12px; /* Bán kính bo góc */
+}
+
+.order-items {
+  max-width: 250px;
+}
+
+.order-item-preview {
+  margin-bottom: 5px;
+}
+
+.order-item-preview span {
+  font-weight: 500;
+  color: #333;
+}
+
+.order-item-preview small {
+  display: block;
+  color: #666;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* Status badges for order statuses */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-pending-payment {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.status-pending-pickup {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.status-pending-delivery {
+  background-color: #cce5ff;
+  color: #004085;
+  border: 1px solid #99d6ff;
+}
+
+.status-delivered {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-returned {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.status-default {
+  background-color: #e2e3e5;
+  color: #495057;
+  border: 1px solid #d6d8db;
+}
+
+/* Empty state styles */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.empty-icon {
+  font-size: 64px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.empty-state p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn-shopping {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-shopping:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+/* Filter info */
+.filter-info {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-view i {
+  font-size: 12px;
+}
+
+/* Loading state */
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Hiệu ứng hover cho các dòng bảng */
+.order-history-table tr:hover {
+  background-color: #fff7f0; /* Màu nền nhẹ khi hover */
+  cursor: pointer;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cải thiện thẻ a (liên kết "Xem chi tiết" + btn-rate) */
+.order-history-table a,
+.btn-rate {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.order-history-table a:hover,
+.btn-rate:hover {
+  color: white;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px); /* dịch nhẹ lên trên */
+  transition: all 0.2s ease;
+}
+
+/* Disabled button style */
+.btn-rate.disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Phân trang */
+.pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.pagination a {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  margin: 0 10px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: var(--tertiary-color);
+  transform: translateY(-2px);
+}
+
+.pagination span {
+  font-size: 18px;
+  color: var(--secondary-color);
+  margin: 0 15px;
+}
+
+/* Cải tiến bố cục và phong cách cho phần header */
+h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Hiệu ứng slide cho tiêu đề */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design cho thiết bị di động */
+@media (max-width: 768px) {
+  .order-history-table {
+    font-size: 14px;
+  }
+
+  .order-history-table th,
+  .order-history-table td {
+    padding: 12px;
+  }
+
+  .pagination a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .order-history-table td {
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 15px;
+  }
+
+  .order-history-table th {
+    display: none;
+  }
+
+  .order-history-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+  }
+}
+.empty-message {
+  text-align: center;
+  padding: 40px 0;
+  color: #888;
+  font-size: 1.2rem;
+}
